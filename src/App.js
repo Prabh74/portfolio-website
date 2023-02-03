@@ -9,15 +9,20 @@ function App() {
 	const [isLoading, setLoading] = useState(true);
 
 	useEffect(() => {
-		setLoading(false)
+		setTimeout(() => setLoading(false), 1500);
 	}, []);
 
 	return (
 		<>
-			{isLoading? <Loader /> : <></>}
-			<Navbar />
-			<Landing />
-			<Cursor />
+			{isLoading ? (
+				<Loader />
+			) : (
+				<>
+					<Navbar />
+					<Landing />
+					<Cursor />
+				</>
+			)}
 		</>
 	);
 }
