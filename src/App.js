@@ -1,11 +1,18 @@
-import './general.css';
+import "./general.css";
+import Landing from "./Components/Landing/Landing";
+import Navbar from "./Components/Navbar/Navbar";
+import Cursor from "./Components/Cursor/Cursor";
 
 function App() {
-  return (
-   <>
-    <h1>Hello World</h1>
-   </>
-  );
+	return (
+		<>
+
+			<Navbar />
+			<Landing />
+
+      <Cursor />
+		</>
+	);
 }
 
 export default App;
