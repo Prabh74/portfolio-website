@@ -2,32 +2,48 @@
 	background: url("/public/Images/landing-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 
 	width: 100vw;
 	height: 100vh;
-    padding: 0 5vw;
+	padding: 0 5vw;
 
-    display: grid;
-    place-items: center;
-    color: rgba(255, 255, 255, 0.75);
+	display: grid;
+	place-items: center;
+	color: rgba(255, 255, 255, 0.75);
 }
 
-.landing-text{
-    font-size: 1.4rem;
-    letter-spacing: 0.2em;
-    font-variation-settings: 'wght' 300;
+.landing-text {
+	font-size: 1.4rem;
+	letter-spacing: 0.2em;
+	font-variation-settings: "wght" 300;
 }
 
-.landing-heading{
-    font-size: 9rem;
-    font-variation-settings: 'wght' 700;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 2px white;
+.landing-heading {
+	font-size: 9rem;
+	font-variation-settings: "wght" 700;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke: 2px white;
 }
 
-.landing-tag{
-    text-align: right;
-    font-family: 'Rubik-Italic';
-    color: rgba(255, 255, 255, 0.4);
+.landing-tag {
+	text-align: right;
+	font-family: "Rubik-Italic";
+	color: rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (max-width: 900px) {
+	.landing-heading {
+		font-size: 3rem;
+		-webkit-text-stroke: 1px white;
+	}
+
+	.landing-text {
+		font-size: 1rem;
+	}
+
+	.landing-tag {
+		font-size: 0.75rem;
+	}
 }
