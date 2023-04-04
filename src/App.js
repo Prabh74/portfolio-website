@@ -1,9 +1,12 @@
 import "./general.css";
 import Landing from "./Components/Landing/Landing";
 import Navbar from "./Components/Navbar/Navbar";
-import Cursor from "./Components/Cursor/Cursor";
 import { useEffect, useState } from "react";
 import Loader from "./Components/Loader/Loader";
+import About from "./Components/About/About";
+import Contact from "./Components/Contact/Contact";
+import Work from "./Components/Work/Work";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
 	const [isLoading, setLoading] = useState(true);
@@ -17,11 +20,21 @@ function App() {
 			{isLoading ? (
 				<Loader />
 			) : (
-				<>
-					<Navbar />
-					<Landing />
-					<Cursor />
-				</>
+				<Routes>
+					<Route path="/" element={<Navbar />}>
+						<Route
+							path="/"
+							element={
+								<>
+									<Landing />
+									<About />
+									<Work />
+									{/* <Contact /> */}
+								</>
+							}
+						/>
+					</Route>
+				</Routes>
 			)}
 		</>
 	);

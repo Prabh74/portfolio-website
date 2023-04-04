@@ -13,9 +13,10 @@
 	box-sizing: border-box;
 	padding: 0;
 	overflow-x: hidden;
+	overflow-y: unset;
 }
 
 #root {
 	font-family: "Rubik";
-	cursor: none;
+	color: white;
 }
